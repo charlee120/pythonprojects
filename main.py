@@ -1,0 +1,33 @@
+class string():
+    def __init__(self):
+        self.u=0
+        self.l=0
+        self.v=0
+        self.c=0
+        self.s=0
+        self.string=" "
+
+    def getstring(self):
+        self.string=input("Enter something:")
+    def count(self):
+        for ch in self.string:
+            if ch.isupper():
+                self.u += 1
+            if ch.islower():
+                self.l += 1
+            if(ch in ('A','a','E','e','I','i','O','o','U','u')):
+                self.v+=1
+            if(ch not  in ('A','a','E','e','I','i','O','o','U','u')):
+                self.c+=1
+            if ch == " ":
+                self.s+=1
+    def disp(self):
+        print("Uppercase Letter:", self.u)
+        print("Lowercase Letter:", self.l)
+        print("vowels", self.v)
+        print("Consonants:", self.c)
+        print("Blank space:", self.s)
+obj = string()
+obj.getstring()
+obj.count()
+obj.disp()
