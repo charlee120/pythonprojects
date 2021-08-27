@@ -1,0 +1,16 @@
+import  pyautogui
+
+photo = 100
+
+while photo > 0:
+    print("times",photo)
+    try:
+        heartposition = pyautogui.locateOnScreen("C:\\Users\\LENOVO\\Pictures\\insta.png")
+        pyautogui.click(heartposition.left +10, heartposition.top + 20)
+        photo -=1
+        pyautogui.moveTo(541, 275)
+    except:
+        for i in range(1,16):
+            print(i)
+            pyautogui.press("down")
+
